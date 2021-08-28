@@ -1,0 +1,34 @@
+:host {
+    vertical-align: middle;
+    margin-right: 20px;
+    padding-top: 0px;
+}
+
+mat-drawer {
+    width: 270px;
+}
+.main {
+    height: 100%;
+}
+app-header {
+    margin: 0 0 0px 0;
+}
+mat-drawer-container {
+    width: 100% !important;
+    // position: fixed;
+    margin-top: 60px;
+    margin-bottom: 0;
+    left: 0;
+    // object-fit: contain;
+}
+app-footer {
+    margin: 0 0 0 0;
+}
+mat-drawer-content {
+    padding: 20px;
+}
+.ryt-top {
+    margin: 100px 0 100px 0;
+}
+  
+  

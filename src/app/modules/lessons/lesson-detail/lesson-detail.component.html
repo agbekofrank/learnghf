@@ -1,0 +1,135 @@
+
+<div fxLayout="column" fxFlex.gt-xs="70%" fxFlex="95%" fxFlexOffset.gt-sm="15" class="container">
+    <!-- <button mat-raised-button (click)="isEditable = !isEditable">
+        {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+    </button> -->
+    <button (click)="goBack()" mat-raised-button mat-fab class="back-button">
+        <mat-icon>navigate_before</mat-icon>
+    </button>
+    <div class="stepper" *ngIf="lesson">
+        <!-- <mat-vertical-stepper> -->
+        <!-- <mat-step>
+                <mat-card *ngFor="let video of lesson.videos">
+                    <video controls>
+                        <source src="{{video.video}}" type="video/mp4">
+                    </video>
+                </mat-card>
+            </mat-step> -->
+        <!-- <mat-step state="learn">
+                <ng-template matStepLabel>{{lesson.slug}}</ng-template>
+                <mat-card *ngFor="let video of lesson.videos">
+                    <video controls>
+                        <source src="{{video.video}}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </mat-card>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step> -->
+        <!-- <mat-step label="Sets" state="Set">
+                <mat-card>
+                    <video controls>
+                        <source src="{{lesson.video}}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </mat-card>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step> -->
+        <!-- <mat-step label="Step 3" state="chat">
+                <p>Take your lunch</p>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step> -->
+        <!-- <mat-step label="Step 3">
+                <p>You're welcome.</p>
+            </mat-step> -->
+
+        <!-- Icon overrides. -->
+        <!-- <ng-template matStepperIcon="phone">
+                <mat-icon>call_end</mat-icon>
+            </ng-template>
+            <ng-template matStepperIcon="chat">
+                <mat-icon>forum</mat-icon>
+            </ng-template> -->
+        <!-- </mat-vertical-stepper> -->
+        <!-- <mat-vertical-stepper linear #stepper>
+            <mat-step [stepControl]="firstFormGroup" [editable]="isEditable" *ngIf="lesson">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>
+                        <mat-card-subtitle>{{lesson.slug}}</mat-card-subtitle>
+                    </ng-template>
+                    <mat-card>
+                        <video controls>
+                            <source src="{{lesson.videos.video}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </mat-card>
+                    <mat-form-field>
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+                    </mat-form-field>
+                    <div>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>
+                        <mat-label>
+                            Fill out your address
+                        </mat-label>
+                    </ng-template>
+                    <mat-form-field>
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+                    </mat-form-field>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>
+                    <mat-label>
+                        Done
+                    </mat-label>
+                </ng-template>
+                <p>You are now done.</p>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </mat-step>
+        </mat-vertical-stepper> -->
+        <mat-vertical-stepper lablePosition="bottom" #stepper>
+            <mat-step *ngFor="let video of lesson.videos">
+                <ng-template matStepLabel>{{video.lesson.slug}}</ng-template>
+                <!-- <mat-form-field>
+                    <mat-label>Answer</mat-label>
+                    <input matInput [formControlName]="env.label">
+                </mat-form-field> -->
+                <mat-card>
+                    <video controls>
+                        <source src="{{video.video}}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </mat-card>
+                <div>
+                    <button mat-button matStepperNext (click)="printControl()">Next</button>
+                </div>
+            </mat-step>
+        </mat-vertical-stepper>
+    </div>
+    <button (click)="goBack()" mat-raised-button mat-fab class="back-button">
+        <mat-icon>navigate_before</mat-icon>
+    </button>
+</div>

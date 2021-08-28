@@ -1,0 +1,28 @@
+<div class="main">
+    <!-- <div fxLayout="row wrap" class="header-div">
+    </div> -->
+    <!-- container for right side nav with router outlet -->
+    <div fxLayout="row" fxLayoutGap="1" fxLayout.lt-sm="column">
+        <div fxFlex="80" fxFlexOffset.gt-xs="10" fxFlex.gt-xs="67">
+            <span>
+                <router-outlet></router-outlet>
+            </span>
+        </div>
+        <div fxFlex="80" class="r-nav-container" fxFlexOffset.gt-xs="5" *ngIf="!loading" fxFlex.gt-xs="27">
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <h2>Recent Stories</h2>
+            </div>
+            <div fxLayout="row" *ngFor="let post of posts">
+                <mat-card fxFlex class="r-mat-card" routerLink="/posts/{{post.slug}}/">
+                    <div fxFlex="75">{{post.title | truncate: ['50']}}</div>
+                    <div fxFlex="23">
+                        <img src="{{post.image}}" alt="">
+                    </div>
+                </mat-card>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <h2>Read More </h2>
+            </div>
+        </div>
+    </div>
+</div>

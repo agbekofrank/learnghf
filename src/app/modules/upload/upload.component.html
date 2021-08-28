@@ -1,0 +1,21 @@
+<button (click)='toggle()'>toggle</button>
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
+
+<h1>Django REST API with Angular 7 File Upload Example</h1>
+<div>
+  <div *ngIf="response && imgUrl">
+    <img [src]='imgUrl' />
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <input type="file" name="file" (change)="onChange($event)" />
+    <input type="text" formControlName="name" id="">
+    <!-- <input type="hidden" name="fileHidden" formControlName="file"/> -->
+    <button type="submit">Upload Image File</button>
+
+  </form>
+</div>
+<button mat-raised-button (click)="openSnackBar('Snack bar opened', 'Dismiss')">notification</button>

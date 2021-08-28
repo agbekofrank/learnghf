@@ -1,0 +1,60 @@
+.span {
+    height: 70%;
+    width: auto;
+    img {
+        object-fit: contain;
+        border-radius: 10%;
+        background-color: white;
+    }
+}
+.profilepix {
+    height: 30%;
+    // width: 11px;
+    background-color: red;
+    img {
+        object-fit: contain;
+        border-radius: 50%;
+    }
+}
+
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100% !important;
+}
+mat-toolbar-row {
+    flex-direction: row;
+    // box-sizing: border-box;
+    display: flex;
+    mat-list-item {
+        color: #c3dae1;
+
+
+    }
+}
+// .active {
+//     color: red;
+
+// }
+.col button {
+    // font-weight: bolder;
+    list-style: none;
+}
+mat-nav-list {
+    display: flex;
+}
+.active {
+    background: #26559b;
+    color: #f6f3f3;
+}
+mat-menu {
+    background: rgb(37, 35, 144);
+}
+/* Prevent bleeding of images */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  // display: block; /* remove extra space below image */
+}

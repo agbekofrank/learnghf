@@ -1,0 +1,41 @@
+<mat-nav-list class="profile-card">
+    <div class="clear">
+        <!-- <h2>{{user.username}}</h2> -->
+        <!-- <h4>{{user.email}}</h4> -->
+    </div>
+    <!-- <mat-divider></mat-divider> -->
+    <img src="./../../../../assets/images/shiba2.jpg" alt="ag">
+    <mat-divider class="mat-divider"></mat-divider>
+    <h4>Pages</h4>
+    <ul>
+        <li>
+            <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/">Dashboard</a>
+        </li>
+        <li>
+            <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/posts">Posts</a>
+        </li>
+        <li>
+            <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/lessons">Lessons</a>
+        </li>
+    </ul>
+    <mat-divider></mat-divider>
+    <h4>Links</h4>
+    <ul>
+        <li>
+            <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/accounts">
+                <mat-icon>import_contacts</mat-icon>
+                Accounts
+            </a>
+        </li>
+        <li>
+            <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/phone">
+                <mat-icon>contact_phone</mat-icon>
+                Phones
+            </a>
+        </li>
+    </ul>
+    <mat-divider></mat-divider>
+</mat-nav-list>

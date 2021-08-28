@@ -1,0 +1,44 @@
+.container {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.stepper {
+    margin: 20px 10px 10px 10px;
+    padding: 0 auto;
+    width: 95%;
+}
+mat-vertical-stepper {
+    background: none;
+    // color: #ffffff;
+        mat-card-subtitle, mat-label{
+        color: #f08a2a;
+    }
+}
+mat-card {
+    max-height: 500px;
+    width: 100%;
+    // margin: 5px 0 10px 0;
+    // padding: 5px 0px 0px 0px;
+    text-align: center;
+    background: #111111;
+    object-fit: contain;
+
+
+
+    img {
+        max-height: 200px;
+        // object-fit: contain;
+    }
+    video {
+        height: 99%;
+        width: 98%;
+    }
+}
+.steps {
+    width: 120px;
+    height: 150px;
+}
+

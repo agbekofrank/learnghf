@@ -1,0 +1,10 @@
+<!-- <button mat-raised-button routerLink="/lessons">lessons</button>
+<button mat-raised-button>detail</button> -->
+<div [@animRoutes]="animationState">
+    <router-outlet (activate)="onActivate($event)">
+        <!-- <button (click)='toggle()'>toggle</button>
+        <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+            <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+        </div> -->
+    </router-outlet>
+</div>

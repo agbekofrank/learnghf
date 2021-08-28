@@ -1,0 +1,15 @@
+<div class="container" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <mat-card fxFlex="0 1 calc(20% - 20px)" fxFlex.xs="80" *ngFor="let post of posts;" class="post">
+        <span *ngIf="post.image">
+            <img class="image" mat-card-image src="{{post.image}}" alt="" routerLink="/posts/{{post.slug}}">
+        </span>
+        <mat-card-title routerLink="/posts/{{post.slug}}">{{post.title}}</mat-card-title>
+        <mat-card-content>
+            <p routerLink="/posts/{{post.slug}}">
+                {{post.content | truncate: ['60']}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>{{post.timestamp}}</mat-card-actions>
+    </mat-card>
+
+</div>

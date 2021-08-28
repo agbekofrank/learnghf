@@ -1,0 +1,35 @@
+<div class="main">
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+      <mat-nav-list>
+        <mat-list-item fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)"
+          routerLink="/heroes/hero-dashboard">
+          <button mat-raised-button fxFlex class="">
+            dashboard
+          </button>
+        </mat-list-item>
+        <mat-list-item fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)"
+          routerLink="/heroes/meroes">
+          <button mat-raised-button fxFlex class="nav-buttons">heroes</button>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+      <div fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+        <div class="hero-add">
+          <span type="submit" (click)="add(heroName.value); heroName.value=''" class="badge">
+            add
+          </span><input #heroName placeholder="Enter A Hero Name">
+        </div>
+      </div>
+      <div fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+        <app-hero-search></app-hero-search>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <router-outlet></router-outlet>
+  </div>
+</div>

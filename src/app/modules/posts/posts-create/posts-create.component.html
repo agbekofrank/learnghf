@@ -1,0 +1,38 @@
+<div fxLayout="row wrap">
+    <!-- <div fxLayout="column" fxFlex="18">1</div> -->
+    <div fxLayout="column" fxFlex="80">
+        <mat-card class="form">
+            <mat-card-title color="primary">Post Form</mat-card-title>
+            <form fxFlexAlign="center center" action="." method="post" [formGroup]="form"
+            (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+                <mat-form-field appearance="fill">
+                    <mat-label>title</mat-label>
+                    <input matInput type="text" placeholder="title" formControlName="title" >
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>content</mat-label>
+                    <textarea matInput cols="30" rows="10" placeholder="content" formControlName="content">
+                </textarea>
+                </mat-form-field>
+                <mat-radio-group>
+                    <input type="radio" formControlName="draft" value="true" (change)="assertDraft($event)"> Draft
+                    <input type="radio" formControlName="draft" value="false" (change)="assertDraft($event)"> Publish
+                </mat-radio-group>
+                <mat-form-field>
+                    <mat-label>Publish date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="publish_date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker ></mat-datepicker>
+                </mat-form-field>
+                <button mat-flat-button>
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+                <mat-label>
+                    <input type="file" name="image" (change)="onFileSelect($event)">
+                </mat-label>
+                <button mat-raised-button color="primary" type="submit" align="right">Save</button>
+            </form>
+        </mat-card>
+    </div>
+    <!-- <div fxLayout="column" fxFlex="23">3</div> -->
+</div>

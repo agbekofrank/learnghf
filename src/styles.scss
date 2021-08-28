@@ -1,0 +1,334 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+  src: url(assets/fonts/LucidaGrande.ttf) format("opentype");
+  src: url(assets/fonts/Lucida-Sans-Unicode/lsansuni.ttf) format("opentype");
+  src: url(assets/fonts/Honey-I-spilt-Verdana/Honey-I-spilt-Verdana.ttf) format("opentype");
+}
+body {
+  // font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-size-adjust: none;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // color:#7b7d82;
+  // background:#185d71 url(assets/images/bg_main.gif) left top repeat-x;
+  margin: 0;
+  padding: 0;
+  // font-family: "Varala", "Varela-Regular", "Varela-Round", serif;
+  // font-family:"Lucida Grande","Lucida Sans Unicode", Arial,Verdana,sans-serif;
+}
+
+/*backgrounds
+---------------------------------------------------------------
+*/
+
+#backgrounds {
+  background: #195d71 url(./assets/images/bg_main.gif) left top repeat-x;
+  color: #fff;
+  ul li {
+    list-style: none;
+  }
+}
+
+/*
+----------------------Headings----------------------------------
+*/
+h1 {
+  font-weight: normal;
+  letter-spacing: -0.04em;
+  padding: 0 0 0 15px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+}
+
+h1 span {
+  font-size: 11px;
+  letter-spacing: 0em;
+  padding: 0 0 0 3px;
+  color: #90c9da;
+}
+
+h2 {
+  margin: 0;
+  padding: 0 0 20px 0;
+  color: #fff;
+  font-weight: normal;
+  font-size: 26px;
+  letter-spacing: -0.04em;
+}
+
+h3 {
+  font-size: 16px;
+  padding: 5px 0 10px 0;
+  margin: 0;
+  color: #ebedef;
+  font-weight: bold;
+}
+mat-card-title {
+  font-size: 16px;
+  padding: 5px 0 10px 0;
+  margin: 0;
+  color: #4c5a04;
+  font-weight: bold;
+}
+.sidebar h4,
+.sidebar2 h4 {
+  color: #8ca21e;
+}
+h4 {
+  font-size: 26px;
+  padding: 30px 0 10px 0;
+  margin: 0 0 0 -0.07em;
+  color: #b8d13e;
+  font-weight: normal;
+  letter-spacing: -0.04em;
+}
+
+h4 span {
+  text-align: right;
+  margin: 0 0 0 auto;
+}
+
+h5 {
+  color: #585a60;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 10px 5px 0;
+}
+
+h5 a {
+  color: #585a60;
+  text-decoration: none;
+}
+h5 a:hover {
+  text-decoration: underline;
+}
+
+h5.sidetitle {
+  color: #8ca21e;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #a8b75b;
+  padding: 30px 0 8px 0;
+  position: relative;
+}
+.clear {
+	clear:both; 
+	font-size: 0; 
+  line-height: 0;
+  border-bottom: 1px dotted #598b99;
+	}
+
+.clearboth {
+	clear:both; 
+  }
+.mat-divider {
+  border-top-color: #72a2c0;
+}
+
+// :host {
+//   ul li {
+//     list-style: none;
+//   }
+// }
+
+/* Search Field
+----------------------------------------------- */
+#searchform {
+  font-size: 12px;
+  // margin: 15px 0 0 auto;
+}
+.searchfield {
+  background: #29687b;
+  border-top: 1px solid #171819;
+  border-left: none;
+  border-right: 1px solid #215564;
+  border-bottom: 1px solid #437b8c;
+  padding: 4px 0 0 21px;
+  height: 17px;
+  width: 150px;
+  color: #81bed4;
+  flex: 1 1 0%;
+  box-sizing: border-box;
+  font-family: "Lucida Grande", Arial, "Bitstream Vera Sans", sans-serif;
+}
+
+.sbutt {
+  border: none;
+  background: none;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+// /* Paddin & Margin
+// ----------------------------------------------- */
+// .pt35 {		padding:35px 0 10px 0;}
+// .pt15 {		padding:15px 0 0 0;}
+// .pt12 {		padding:12px 0 0 0;}
+// .pt10 {		padding:10px 0 0 0;}
+// .pt5 {		padding:5px 0 0 0;}
+
+// .pb40 {		padding:0 0 40px 0;}
+// .pb30 {		padding:0 0 30px 0;}
+// .pb20 {		padding:0 0 20px 0;}
+// .pb15 {		padding:0 0 15px 0;}
+// .pb10 {		padding:0 0 10px 0;}
+// .pb5 {		padding:0 0 5px 0;}
+
+// .pl30 {		padding:0 0 0 30px;}
+// .pl20-pr20-pb40 {	padding:0 20px 40px 20px;}
+// .pl20 {		padding:0 0 0 20px;}
+
+// .pr25 {		padding:0 25px 0 0;}
+// .pr20 {		padding:0 20px 0 0;}
+
+// .p0 {		padding:0;}
+
+// .mt20 {		margin:20px 0 0 0;}
+// .mt15 {		margin:15px 0 0 0;}
+// .mt10 {		margin:10px 0 0 0;}
+// .mt5 {		margin:5px 0 0 0;}
+// .mt3 {		margin:3px 0 0 0;}
+
+// .mb40 {		margin:0 0 40px 0;}
+// .mb30 {		margin:0 0 30px 0;}
+// .mb20 {		margin:0 0 20px 0;}
+// .mb15 {		margin:0 0 15px 0;}
+// .mb12 {		margin:0 0 12px 0;}
+// .mb10 {		margin:0 0 10px 0;}
+// .mb5 {		margin:0 0 5px 0;}
+// .mb3 {		margin:0 0 3px 0;}
+
+// .ml70 {		margin:0 0 0 70px;}
+// .ml5 {		margin:0 0 0 5px;}
+
+// .mc {		margin:0 auto;}
+
+// .m0 {		margin:0;}
+
+/* for the trial responsive component only */
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+h1 {
+  color: #004433;
+}
+h2 {
+  color: #232323;
+}
+.nav-buttons {
+  margin: 5% 20px 5% 5%;
+}
+
+.confirm-dialog-container .mat-dialog-container {
+  border-radius: 0.25em 0.25em 0.4em 0.4em;
+  padding: 0px;
+}
+.confirm-dialog-container .content-container {
+  margin: 5px 5px 15px 5px;
+  // background-color: #2C5F2D;
+  // color: #97BC62FF;
+  color: #2c5f2d;
+  display: flex;
+}
+.confirm-dialog-container #close-icon {
+  margin-left: auto;
+  order: 2;
+  font-weight: bolder;
+}
+.confirm-dialog-container #close-icon:hover {
+  cursor: pointer;
+}
+.confirm-dialog-container #no-button {
+  height: 50%;
+  width: 50%;
+  color: #ffe77aff;
+  background-color: #2c5f2dff;
+}
+.confirm-dialog-container #yes-button {
+  height: 50%;
+  width: 50%;
+  color: #2c5f2dff;
+  background-color: #ffe77aff;
+}
+.btn-dialog-close {
+  width: 45px;
+  min-width: 0px !important;
+  height: 40px;
+  padding: 0px !important;
+}
+
+/* Snack Bar Notifications */
+
+.notifications {
+  // background-color:#79fae3;
+  background-color: #606060ff;
+  color: rgb(134, 221, 107);
+  // color: #3919a1;
+  border-radius: 5px;
+  text-align: center;
+  // max-width: 5% !important;
+  // margin-left: 20%;
+}
+
+// /*search field
+// ---------------------------------------------------------------
+// */
+
+// #searchform {
+//   position: absolute;
+//   top: 37px;
+//   left: 759px;
+//   font-size: 12px;
+// }
+
+// .searchfield {
+//   background: #a1b3b9 url(assets/images/bg_search.gif) left top no-repeat;
+//   // border-top:1px solid #171819;
+//   border-left: none;
+//   // border-right:1px solid #215564;
+//   // border-bottom:1px solid #437b8c;
+//   padding: 4px 0 0 21px;
+//   height: 17px;
+//   width: 150px;
+//   color: #93c7d7;
+//   font-family: "Lucida Grande", Arial, "Bitstream Vera Sans", sans-serif;
+// }
+
+// .sbutt {
+//   border: none;
+//   background: none;
+//   color: #fff;
+//   margin: 0;
+//   padding: 0;
+// }
+
+/* Global styles */
+
+.back-button {
+  cursor: pointer;
+  background-color: #0d1925 !important;
+  
+}

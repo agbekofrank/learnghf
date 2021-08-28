@@ -1,0 +1,42 @@
+<div
+  fxLayout.xs="column"
+  fxLayout="row wrap"
+  fxLayoutGap="10px"
+  ngClass.gt-xs="ml-10"
+  fxLayoutAlign="center center"
+>
+  <mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <form>
+        <mat-form-field class="form-full-width">
+          <mat-label>Username</mat-label>
+          <input matInput #username placeholder="Username" required />
+          <mat-hint>The username you used to register</mat-hint>
+          <mat-error>Username is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-full-width">
+          <mat-label>Password</mat-label>
+          <input
+            #password
+            type="password"
+            matInput="password"
+            placeholder="password"
+          />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="login(username.value, password.value)">
+        login
+      </button>
+    </mat-card-actions>
+    <!-- <mat-error *ngFor="let m of errorMessage">
+                {{ m.slice(69,90)}}
+            </mat-error>
+        <mat-error *ngIf="error">
+            {{ error?.error | json }}
+        </mat-error> -->
+  </mat-card>
+</div>

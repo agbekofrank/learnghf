@@ -1,0 +1,83 @@
+:host {
+    vertical-align: middle;
+    margin-right: 20px;
+    padding-top: 0px;
+
+    button {
+        display: flexbox;
+        background-color: #f3f3f3;
+        color: #006b38ff;
+        &:hover {
+            background-color: rgb(1, 20, 1);
+            color: rgb(168, 224, 160);
+        }
+    }
+    h2 {
+        color: #458063;
+        // background-color: #f3f3f3;
+    }
+}
+.m {
+    background-color: yellowgreen;
+}
+.r-nav-container {
+    margin-bottom: 20px;
+}
+
+.main {
+    max-height: 100%;
+}
+.header-div {
+    margin: 10px 10px 10px 10px;
+    // button {
+    //     font-weight: bolder;
+    // }
+}
+
+.r-mat-card {
+    background: rgb(243, 243, 243);
+    height: 58px;
+    width: 90%;
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    // padding: 0 0 0 0;
+    opacity: 0.89;
+    overflow-wrap: auto;
+    &:hover {
+        // opacity: 1;
+        background: #101820FF; 
+        color: rgb(168, 224, 160);
+        cursor: pointer;
+    }
+}
+
+img {
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+mat-nav-list {
+    display: flex;
+    flex-direction: row;
+  }
+  mat-nav-list a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 0px 20px 0px 10px;
+    // display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  mat-nav-list a:visited, a:link {
+    color: #334953;
+  }
+  mat-nav-list a:hover {
+    color: #039be5;
+    background-color: #cfd8dc;
+  }
+  mat-nav-list a.active {
+    color: #039be5;
+  }

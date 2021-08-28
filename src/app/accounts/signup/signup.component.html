@@ -1,0 +1,36 @@
+<div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10" fxLayoutAlign="center center">
+    <mat-card>
+        <mat-card-title>Sign Up</mat-card-title>
+        <mat-card-content>
+            <form>
+                <mat-form-field class="form-full-width">
+                    <mat-label>Username</mat-label>
+                    <input #username matInput placeholder="Username">
+                    <!-- <mat-hint>The username you used to register</mat-hint> -->
+                </mat-form-field>
+                <mat-form-field class="form-full-width">
+                    <mat-label>Email Address</mat-label>
+                    <input #email type="email" matInput placeholder="Email Address">
+                    <!-- <mat-hint>The username you used to register</mat-hint> -->
+                </mat-form-field>
+                <mat-form-field class="form-full-width">
+                    <mat-label>Password</mat-label>
+                    <input #password1 type="password" matInput="password" placeholder="password">
+                </mat-form-field>
+                <mat-form-field class="form-full-width">
+                    <mat-label>Confirm Password</mat-label>
+                    <input #password2 type="password" matInput="password" placeholder=" Confirm password">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button
+            (click)="signup(username.value, email.value, password1.value, password2.value)">
+                Sign Up
+            </button>
+        </mat-card-actions>
+        <mat-error *ngIf="error">
+            {{ error?.error | json }}
+        </mat-error>
+    </mat-card>
+</div>

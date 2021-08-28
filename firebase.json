@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "respDash",
+      "public": "dist/respDash",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<!-- <div fxFlex="55" fxFlexOffset="10" class=""> -->
+<div class="card-container">
+    <mat-card *ngIf="post" class="mat-card">
+        <img mat-card-image src="{{post.image}}" alt="">
+        <mat-card-title>{{post.title}}</mat-card-title>
+        <mat-card-content>
+            <p>
+                <small>
+                    Author: {{post.user['username'] | titlecase }}
+                </small>
+            </p>
+            {{post.content}}
+        </mat-card-content>
+        <mat-card-actions>
+            <ul>
+                <li>
+                    <mat-icon (click)="goBack()">navigate_before</mat-icon>
+                </li>
+            </ul>
+            <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" *ngIf="user==='ag'">
+                <ul fxLayout="row" fxLayoutGap="20px" class="navs">
+                    <li (click)="editButtonClick(post.slug)">
+                        <mat-icon>edit</mat-icon>
+                    </li>
+                    <li (click)="deletePost(post)">
+                        <mat-icon>delete</mat-icon>
+                    </li>
+                    <li routerLink="/posts/create/">
+                        <mat-icon>add</mat-icon>
+                    </li>
+                </ul>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<!-- </div> -->

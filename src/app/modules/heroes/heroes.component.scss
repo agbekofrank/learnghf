@@ -1,0 +1,101 @@
+/* Application-wide Styles */
+// @import '~bootstrap/dist/css/bootstrap.css';
+h1 {
+    color: #00743f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+  }
+  h2, h3 {
+    color: #f2a104;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  body {
+    margin: 2em;
+  }
+  body, input[type="text"], button {
+    color: #333;
+    font-family: Cambria, Georgia;
+  }
+  /* everywhere else */
+  * 
+
+/* AppComponent's private CSS styles */
+h1 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+.main {
+ max-height: 100%;
+ position: relative;
+}
+mat-nav-list a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 0px 20px 0px 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+mat-nav-list a:visited, a:link {
+  color: #334953;
+}
+mat-nav-list a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+mat-nav-list a.active {
+  color: #039be5;
+}
+.inline-list {
+  display: flex;
+  margin: 0px 20px 20px 20px;
+  width: 20%;
+}
+/** Hero add form **/
+.hero-add {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+  display: flex;
+}
+.hero-add .badge {
+  display: flex;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #405061;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin: 2% -2px 0 0;
+  border-radius: 4px 0 0 4px;
+}
+.hero-add input {
+  height: 2.1em;
+}
+/* mat card */
+mat-card {
+  margin-bottom: 10px;
+}
+div {
+  margin-bottom: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+

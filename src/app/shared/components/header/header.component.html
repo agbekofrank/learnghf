@@ -1,0 +1,88 @@
+<mat-toolbar id="backgrounds">
+    <mat-toolbar-row fxLayout="row">
+        <button mat-icon-button (click)="togSidebar()">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <div class="span" routerLinkActive="active" routerLink="/">
+            <img src="./../../../../assets/images/deal.gif" alt="APP LOGO">
+        </div>
+        <!-- <h1>
+            <a routerLink="/">LearnGH</a>
+        </h1> -->
+        <div fxFlex fxLayout="row wrap" fxLayoutAlign="center center">
+            <mat-nav-list>
+                <mat-list-item routerLinkActive="active" routerLink="/posts/list" fxHide.xs>
+                    News
+                </mat-list-item>
+                <mat-list-item routerLinkActive="active" routerLink="/lessons" fxHide.xs>
+                    Learning
+                </mat-list-item>
+                <mat-list-item fxHide.xs routerLinkActive="active" routerLink="/heroes/hero-dashboard">
+                    Heroes
+                </mat-list-item>
+                <mat-list-item fxHide.gt-xs>
+                    <a [matMenuTriggerFor]="menu">
+                        <mat-icon>menu</mat-icon>
+                    </a>
+                </mat-list-item>
+                <mat-list-item fxHide.xs>
+                    <form fxFlex action="" method="get" id="searchform">
+                        <input type="text" class="searchfield" value="search">
+                        <input type="submit" value="GO" class="sbutt">
+                    </form>
+                </mat-list-item>
+            </mat-nav-list>
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/">
+                    <mat-icon>home</mat-icon>Home
+                </button>
+                <button mat-menu-item routerLink="/posts/list">
+                    <mat-icon>chrome_reader_mode</mat-icon>
+                    News
+                </button>
+                <button mat-menu-item routerLink="/lessons">
+                    <mat-icon>book</mat-icon>
+                    Lessons
+                </button>
+
+            </mat-menu>
+        </div>
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20">
+                <!-- <li>
+                    <button mat-icon-button>
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                </li> -->
+                <li>
+                    <button mat-button [matMenuTriggerFor]="profile">
+                        <mat-icon *ngIf="!user">person_outline</mat-icon>
+                        <span *ngIf="user">
+                            {{user}}
+                        </span>
+                    </button>
+                    <mat-menu #profile="matMenu">
+                        <button mat-menu-item (click)="logout()">
+                            <mat-icon>arrow_backward</mat-icon>
+                            sign out
+                        </button>
+                        <button mat-menu-item>
+                            <mat-item routerLink="/accounts/login">
+                                <mat-icon>arrow_forward</mat-icon>
+                                login
+                            </mat-item>
+                        </button>
+                        <button mat-menu-item>
+                            <mat-item routerLink="/accounts/signup">
+                                <mat-icon>group_add</mat-icon>
+                                signup
+                            </mat-item>
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,92 @@
+<div fxLayout="row wrap" class="main" id="backgrounds">
+  <app-header fxLayout="row wrap" (togSidebarForMe)="sidebarToggler()"></app-header>
+  <!-- <div fxLayout="row" class="main"> -->
+  <mat-drawer-container fxLayout="row">
+    <mat-drawer mode="push" [opened]="sideBarOpen">
+      <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content (click)="sideBarClose()">
+      <router-outlet>
+      </router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  <!-- </div> -->
+  <!-- <div fxLayout="row" class="footer"> -->
+  <app-footer fxLayout="row"></app-footer>
+</div>
+
+
+<!-- <app-header (togSidebarForMe)="sidebarToggler()"></app-header>
+  <div fxLayout="row wrap">
+    <h1 fxHide fxShow.xs>XS</h1>
+    <h1 fxHide fxShow.sm>SM</h1>
+    <h1 fxHide fxShow.md>MD</h1>
+    <h1 fxHide fxShow.lg>LG</h1>
+    <h1 fxHide fxShow.xl>XL</h1>
+  </div>
+  <mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+      <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content (click)="sideBarClose()">
+      <router-outlet>
+      </router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div> -->
+
+
+
+
+<!-- <div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+  <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+    <mat-card-title>Card 1</mat-card-title>
+    <img mat-card-image src="https://kakiseni.org/wp-content/uploads/2018/03/250X250.png" class="image">
+    <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
+    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions>
+  </mat-card>
+  
+  <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+    <mat-card-title>Card 2</mat-card-title>
+    <img mat-card-image src="https://kakiseni.org/wp-content/uploads/2018/03/250X250.png" class="image">
+    <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
+    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions>
+  </mat-card>
+
+  <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+    <mat-card-title>Card 3</mat-card-title>
+    <img mat-card-image src="https://kakiseni.org/wp-content/uploads/2018/03/250X250.png" class="image">
+    <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
+    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions>
+  </mat-card>
+
+  <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+    <mat-card-title>Card 4</mat-card-title>
+    <img mat-card-image src="https://kakiseni.org/wp-content/uploads/2018/03/250X250.png" class="image">
+    <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
+    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions>
+  </mat-card>
+
+  <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+    <mat-card-title>Card 5</mat-card-title>
+    <img mat-card-image src="https://kakiseni.org/wp-content/uploads/2018/03/250X250.png" class="image">
+    <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
+    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions>
+  </mat-card>
+
+  <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+    <mat-card-title>Card 6</mat-card-title>
+    <img mat-card-image src="https://kakiseni.org/wp-content/uploads/2018/03/250X250.png" class="image">
+    <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
+    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions>
+  </mat-card>
+
+  <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+    <mat-card-title>Card 7</mat-card-title>
+    <img mat-card-image src="https://kakiseni.org/wp-content/uploads/2018/03/250X250.png" class="image">
+    <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
+    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions>
+  </mat-card>
+</div> -->
